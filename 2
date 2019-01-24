@@ -1,0 +1,27 @@
+#include<QApplication>
+#include<QWidget>
+#include<QLineEdit>
+#include<QCompleter>
+
+int main(int argc, char * argv[])
+{
+    QApplication app(argc, argv);
+    QWidget w;
+    w.setWindowTitle("this is the edit!");
+    QLineEdit edit;
+    edit.setParent(&w);
+    //edit.setEchoMode(QLineEdit::Password);
+    QCompleter completer(QStringList()<<"123456"<<"12345"<<"aaaaa"<<"bbbb");
+    completer.setFilterMode(Qt::MatchContains);
+    edit.setCompleter(&completer);
+
+    w.show();
+    return app.exec();
+}
+
+//  the echomode indicate the different mode of the echo
+//    enum EchoMode { Normal, NoEcho, Password, PasswordEchoOnEdit };
+// we can use the edit.text() to get the string
+// we can use the edit.setPlaceholderText("hinder") to put the hinders.
+
+// QStringList , we can do it
