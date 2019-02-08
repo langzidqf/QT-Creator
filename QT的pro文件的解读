@@ -1,0 +1,15 @@
+QT -= core gui
+
+TARGET = 你的项目名称如Hello
+
+CONFIG += console
+
+TEMPLATE = app
+
+SOURCES += main.cpp (你的项目文件，这里加不加都可以，可以在QtCreator里面填)
+
+其中的QT += 表示当前的工程需要包含QT的哪些模块。可以分开书写
+其中的greaterThan(version)则表示在QT的版本的最低要求
+TARGET 和 TEMPLATE 表示工程名和工程类型，（app表示可执行文件，lib则表示库）
+SOURCES，HEADERS，FORMS 分别表示了工程所包含的源文件、头文件、界面文件。
+以上便是QT的基本使用情况。
